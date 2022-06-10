@@ -6,10 +6,10 @@ def roman_to_int(s):
     i = 0
     num = 0
     while i < len(s):
-        if i+1<len(s) and s[i:i+2] in roman:
+        if i+1 < len(s) and s[i:i+2] in roman:
             num+=roman[s[i:i+2]]
-            i+=2
+            i += 2
         else:
             num+=roman[s[i]]
-            i+=1
+            i += 1
     return num
