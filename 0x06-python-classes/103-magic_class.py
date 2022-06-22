@@ -8,7 +8,7 @@ Calculate area and circumference
 """
 
 
-class MagicClass:
+class MagicClass():
     """
     Calculate area and circumference
     """
