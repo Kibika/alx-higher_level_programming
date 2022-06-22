@@ -1,9 +1,17 @@
 #!/usr/bin/python3
 import dis
 import math
+"""
+Decodes bytecode 
+Get radius as input
+Calculate area and circumference
+"""
 
 
 class MagicClass:
+    """
+    Calculate area and circumference
+    """
     def __init__(self, radius=0):
         self.__radius = 0
 
