@@ -1,0 +1,69 @@
+===============================
+ How to Use add_integer.py
+===============================
+
+This library is very simple, since it only has one function called
+''add_integer()''.
+
+Numbers
+=======
+
+``add_integer()`` returns the sum of its arguments.  For numbers,
+that value is equivalent to using the ``+`` operator.
+
+::
+
+    >>> add_integer = __import__("0-add_integer").add_integer
+    >>> add_integer(2, 3)
+    5
+
+    >>> add_integer(-2, -3)
+    -5
+
+    >>> add_integer(-2, 3)
+    1
+
+    >>> add_integer(True, 3)
+    4
+
+    >>> add_integer(-2, False)
+    -2
+    
+    >>> add_integer({1, 2, 3}, 2)
+    Traceback (most recent call last):
+        ...
+    TypeError: a must be an integer
+ 
+    >>> add_integer(2, {1, 2, 3})
+    Traceback (most recent call last):
+        ...
+    TypeError: b must be an integer
+
+It also works with floating-point values but returns integer.
+
+::
+
+    >>> add_integer(2.5, 3)
+    5
+
+It takes only float or integer values
+    >>> add_integer("School", 1)
+    Traceback (most recent call last):
+        ...
+    TypeError: a must be an integer
+
+    >>> add_integer(1, "School")
+    Traceback (most recent call last):
+        ...
+    TypeError: b must be an integer
+
+It takes two integer or float arguments
+    >>> add_integer()
+    Traceback (most recent call last):
+        ...
+    TypeError: add_integer() missing 2 required positional arguments: 'a' and 'b'
+
+    >>> add_integer(1)
+    Traceback (most recent call last):
+        ...
+    TypeError: add_integer() missing 1 required positional argument: 'b'
