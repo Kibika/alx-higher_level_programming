@@ -78,6 +78,7 @@ class Rectangle(Base):
 
     @staticmethod
     def setter_validation(attribute, value):
+        """checks for validity of input"""
         if type(value) != int:
             raise TypeError("{} must be an integer".format(attribute))
         if attribute == "x" or attribute == "y":
@@ -85,3 +86,8 @@ class Rectangle(Base):
                 raise ValueError("{} must be >= 0".format(attribute))
         elif value <= 0:
             raise ValueError("{} must be > 0".format(attribute))
+
+    def area(self):
+        """calculates area of rectangle"""
+        area = self.width * self.height
+        return area
